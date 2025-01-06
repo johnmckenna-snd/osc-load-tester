@@ -43,7 +43,6 @@ export function sendMessages ({
 
     if (ratePerSecond) {
       setTimeout(() => {
-        oscClient.send({ address: `${customMessage}/${messageNumber + batchNumber * total}` });
         recursiveSendMessage(newMessageNumber);
       }, 1000 / ratePerSecond);
     } else {

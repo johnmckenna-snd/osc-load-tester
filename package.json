@@ -1,0 +1,26 @@
+{
+  "name": "osc-load-tester",
+  "version": "1.0.0",
+  "description": "it allows rate testing and stress testing of osc receiving devices",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo no test",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "john mckennna",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@sndwrks/lumberjack": "^0.6.0",
+    "dotenv": "^16.4.7",
+    "osc": "^2.4.5"
+  }
+}

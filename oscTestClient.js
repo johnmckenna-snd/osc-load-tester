@@ -37,7 +37,15 @@ export function sendMessages ({
   function recursiveSendMessage (messageNumber) {
     const newMessageNumber = messageNumber + 1;
 
-    oscClient.send({ address: `${customMessage}/${newMessageNumber + batchNumber * total}` });
+    oscClient.send({
+      address: customMessage,
+      args: [
+        {
+          type: 'f',
+          value: newMessageNumber + batchNumber * total,
+        },
+      ],
+    });
 
     if (!(newMessageNumber < total)) return;
 
